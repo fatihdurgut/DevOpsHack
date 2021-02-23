@@ -29,6 +29,7 @@ stages:
           $(tag)
     
     - task: CreateWorkItem@1
+      condition: failed()
       inputs:
         workItemType: 'Bug'
         title: 'Failed Build'
