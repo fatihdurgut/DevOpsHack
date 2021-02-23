@@ -32,5 +32,5 @@ stages:
       inputs:
         workItemType: 'Bug'
         title: 'Failed Build'
-        assignedTo: 'afatihdurgut@hotmail.com'
+        assignedTo: 'Fatih Durgut <afatihdurgut@hotmail.com>'
         associate: true
