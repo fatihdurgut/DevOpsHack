@@ -19,7 +19,7 @@ stages:
     displayName: Build
     pool:
       vmImage: ubuntu-latest
-    steps:
+    steps:    
     - task: Docker@2
       displayName: Build an image
       inputs:
@@ -27,3 +27,10 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/apis/user-java/Dockerfile'
         tags: |
           $(tag)
+    
+    - task: CreateWorkItem@1
+      inputs:
+        workItemType: 'Bug'
+        title: 'Failed Build'
+        assignedTo: 'Fatih Durgut'
+        associate: true
